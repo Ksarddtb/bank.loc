@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+~const mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -25,16 +25,23 @@ mix
 
     /* JS */
     .js('resources/js/app.js', 'public/js/laravel.app.js')
+    .js('resources/js/app.js', 'public/js')
     .js('resources/js/dashmix/app.js', 'public/js/dashmix.app.js')
 
     /* Page JS */
     .js('resources/js/pages/tables_datatables.js', 'public/js/pages/tables_datatables.js')
 
+    .postCss('resources/css/app.css', 'public/css', [
+        require('postcss-import'),
+        require('tailwindcss'),
+    ])
     /* Tools */
     .browserSync('localhost:8000')
     .disableNotifications()
-
     /* Options */
     .options({
         processCssUrls: false
     });
+    if (mix.inProduction()) {
+        mix.version();
+    }
