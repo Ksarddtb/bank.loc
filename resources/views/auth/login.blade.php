@@ -18,10 +18,11 @@
             <!-- Sign In Form -->
             <!-- jQuery Validation (.js-validation-signin class is initialized in js/pages/op_auth_signin.min.js which was auto compiled from _js/pages/op_auth_signin.js) -->
             <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
-            <form class="js-validation-signin" action="be_pages_auth_all.html" method="POST">
+            <form class="js-validation-signin"  method="POST">
+                @csrf
               <div class="mb-4">
                 <div class="input-group input-group-lg">
-                  <input type="text" class="form-control" id="login-username" name="login-username" placeholder="Username">
+                  <input type="text" class="form-control" name="login" placeholder="Username">
                   <span class="input-group-text">
                     <i class="fa fa-user-circle"></i>
                   </span>
@@ -29,7 +30,7 @@
               </div>
               <div class="mb-4">
                 <div class="input-group input-group-lg">
-                  <input type="password" class="form-control" id="login-password" name="login-password" placeholder="Password">
+                  <input type="password" class="form-control" name="password" placeholder="Password">
                   <span class="input-group-text">
                     <i class="fa fa-asterisk"></i>
                   </span>
@@ -52,18 +53,7 @@
             </form>
             <!-- END Sign In Form -->
           </div>
-          <div class="block-content bg-body">
-            <div class="text-center d-flex justify-content-center push">
-              <a class="item item-circle item-tiny me-1 bg-default" data-toggle="theme" data-theme="default" href="#"></a>
-              <a class="item item-circle item-tiny me-1 bg-xwork" data-toggle="theme" data-theme="assets/css/themes/xwork.min.css" href="#"></a>
-              <a class="item item-circle item-tiny me-1 bg-xmodern" data-toggle="theme" data-theme="assets/css/themes/xmodern.min.css" href="#"></a>
-              <a class="item item-circle item-tiny me-1 bg-xeco" data-toggle="theme" data-theme="assets/css/themes/xeco.min.css" href="#"></a>
-              <a class="item item-circle item-tiny me-1 bg-xsmooth" data-toggle="theme" data-theme="assets/css/themes/xsmooth.min.css" href="#"></a>
-              <a class="item item-circle item-tiny me-1 bg-xinspire" data-toggle="theme" data-theme="assets/css/themes/xinspire.min.css" href="#"></a>
-              <a class="item item-circle item-tiny me-1 bg-xdream" data-toggle="theme" data-theme="assets/css/themes/xdream.min.css" href="#"></a>
-              <a class="item item-circle item-tiny me-1 bg-xpro" data-toggle="theme" data-theme="assets/css/themes/xpro.min.css" href="#"></a>
-              <a class="item item-circle item-tiny bg-xplay" data-toggle="theme" data-theme="assets/css/themes/xplay.min.css" href="#"></a>
-            </div>
+
           </div>
         </div>
         <!-- END Sign In Block -->
