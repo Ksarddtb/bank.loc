@@ -16,6 +16,7 @@
         "laravel/framework": "^8.0",
         "laravel/jetstream": "^2.4",
         "laravel/tinker": "^2.0",
+        "laravelcollective/html": "^6.2",
         "livewire/livewire": "^2.5"
     },
     "require-dev": {
