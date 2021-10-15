@@ -17,8 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     route::get('/',[\App\Http\Controllers\DashboardController::class,'index'])->name('dashboard');
-    Route::view('/pages/slick', 'pages.slick');
-    Route::view('/pages/datatables', 'pages.datatables');
+    route::resource('/creditfiz',\App\Http\Controllers\CredetfizController::class);
+    route::resource('/credityur',\App\Http\Controllers\CredetfizController::class);
+    // Route::view('/pages/slick', 'pages.slick');
+    // Route::view('/pages/datatables', 'pages.datatables');
     Route::view('/pages/blank', 'pages.blank');
 });
 

@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
             \Database\Seeders\ProvinceSeeder::class,
             \Database\Seeders\RegionSeeder::class,
             \Database\Seeders\CompanySeeder::class,
+            \Database\Seeders\SubjectsSeeder::class,
+            \Database\Seeders\CreditTypeSeeder::class,
         ]);
         \App\Models\User::factory(1)->create();
 

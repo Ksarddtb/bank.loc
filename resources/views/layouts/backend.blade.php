@@ -26,6 +26,7 @@
 
   <!-- You can include a specific file from public/css/themes/ folder to alter the default color theme of the template. eg: -->
   <!-- <link rel="stylesheet" id="css-theme" href="{{ mix('css/themes/xwork.css') }}"> -->
+  @livewireStyles()
   @yield('css_after')
 
   <!-- Scripts -->
@@ -297,7 +298,7 @@
     <!-- END Footer -->
   </div>
   <!-- END Page Container -->
-
+@livewireScripts()
   <!-- Dashmix Core JS -->
   <script src="{{ mix('js/dashmix.app.js') }}"></script>
 
@@ -305,6 +306,7 @@
   <!-- <script src="{{ mix('/js/laravel.app.js') }}"></script> -->
 
   @yield('js_after')
+  @stack('scripts')
 </body>
 
 </html>
